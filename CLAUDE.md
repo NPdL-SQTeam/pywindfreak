@@ -27,11 +27,13 @@ uv run pytest path/to/test_file.py::test_name
 
 ## Structure
 
-Source files live at the project root alongside `__init__.py`. As the project grows, move source into a `src/pywindfreak/` layout and tests into `tests/`.
+Source is in `pywindfreak/`. As the project grows, move to a `src/pywindfreak/` layout and add tests in `tests/`.
 
-- `synthhd_mini.py` — `SynthHDMini` driver class and `ReferenceMode` enum
-- `__init__.py` — re-exports `SynthHDMini` and `ReferenceMode`
+- `pywindfreak/enums.py` — `ReferenceMode` enum (shared by all drivers)
+- `pywindfreak/synthhd_mini.py` — `SynthHDMini` single-channel driver
+- `pywindfreak/synthhd.py` — `SynthHD` two-channel driver (covers SynthHD and SynthHD PRO)
+- `pywindfreak/__init__.py` — re-exports `ReferenceMode`, `SynthHDMini`, `SynthHD`
 
 ## Key dependency
 
-- `pyserial` — USB/serial communication with the SynthHD Mini
+- `pyserial` — USB/serial communication with Windfreak devices

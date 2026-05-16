@@ -1,13 +1,8 @@
-import enum
 import os
 
 import serial
 
-
-class ReferenceMode(enum.IntEnum):
-    EXTERNAL = 0
-    INTERNAL_27MHZ = 1
-    INTERNAL_10MHZ = 2
+from .enums import ReferenceMode
 
 
 def _resolve_port(port: str) -> str:
@@ -22,7 +17,7 @@ class SynthHDMini:
     def __init__(self, port: str, timeout: float = 1.0) -> None:
         self._serial = serial.Serial(_resolve_port(port), baudrate=9600, timeout=timeout)
         self.rf_enable = False
-        self.reference_mode = ReferenceMode.EXTERNAL
+        self.reference_mode = ReferenceMode.INTERNAL_27MHZ
 
     def close(self) -> None:
         self._serial.close()

@@ -1,3 +1,5 @@
-from .synthhd_mini import ReferenceMode, SynthHDMini
+from .enums import ReferenceMode
+from .synthhd_mini import SynthHDMini
+from .synthhd import SynthHD
 
-__all__ = ["ReferenceMode", "SynthHDMini"]
+__all__ = ["ReferenceMode", "SynthHD", "SynthHDMini"]
