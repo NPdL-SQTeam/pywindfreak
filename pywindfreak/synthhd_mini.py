@@ -20,6 +20,7 @@ class SynthHDMini:
         self.reference_mode = ReferenceMode.INTERNAL_27MHZ
 
     def close(self) -> None:
+        self.rf_enable = False
         self._serial.close()
 
     def _send(self, cmd: str) -> None:

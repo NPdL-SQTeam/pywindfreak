@@ -67,6 +67,8 @@ class SynthHD:
         return self._channels[index]
 
     def close(self) -> None:
+        for ch in self._channels:
+            ch.rf_enable = False
         self._serial.close()
 
     def _send(self, cmd: str) -> None:
