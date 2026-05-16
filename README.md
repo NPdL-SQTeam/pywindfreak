@@ -4,9 +4,13 @@ Python driver for the [Windfreak Technologies SynthHD Mini](https://windfreaktec
 
 ## Installation
 
+Install from a private GitHub repository using a Personal Access Token (PAT):
+
 ```bash
-pip install git+___.git
+pip install git+https://<PAT>@github.com/<username>/pywindfreak.git
 ```
+
+Replace `<PAT>` with your GitHub Personal Access Token and `<username>` with the repository owner's GitHub username.
 
 > The GitHub repository URL is TBD and will be updated once published.
 
