@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-`pywindfreak` is a Python 3.13 project managed with [uv](https://docs.astral.sh/uv/).
+`pywindfreak` is a Python 3.9+ project managed with [uv](https://docs.astral.sh/uv/).
 
 ## Commands
 
